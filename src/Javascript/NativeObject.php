@@ -15,7 +15,7 @@
 		public static $__proto__; 
 		public function __construct()
 		{
-				
+			self::__proto__ = new Prototype();	
 		}
 		public function hasOwnProperty( string $key )
 		{
