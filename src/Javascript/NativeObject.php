@@ -43,7 +43,7 @@
 		{
 			$this->{$key} = $value;
 		}
-		public function __defineGetter__(string $key , Function $callable)
+		public function __defineGetter__(string $key , BaseFunction $callable)
 		{
 			$this->{'get' . $key} = $callable;
 		}
