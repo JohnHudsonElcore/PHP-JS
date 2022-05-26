@@ -8,7 +8,7 @@
         * @return {String}
         * @description - keyword to match for instance "let", "var", "const", "for"
         */
-        public function getKeyword() : string;        
+        public static function getKeyword() : string;
     }
 
 ?>
