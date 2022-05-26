@@ -16,10 +16,13 @@
 			{
 				$range = substr($code , $pointer , strlen($code));
 				
-				if( stristr( $range , '=>') && 
-				    	(strpos( $range , '=>' ) < strpos( $range , ';' ) || 
-						 strpos( $range , '=>') < strpos($range , '}' )
-				) )
+				if( 
+					stristr( $range , '=>') && 
+					(
+						strpos( $range , '=>' ) < strpos( $range , ';' ) || 
+						strpos( $range , '=>') < strpos($range , '}' )
+					) 
+				) 
 				{
 					//higher probability	
 					//ES6 Arrow function can be
@@ -27,14 +30,16 @@
 					//hello = (val) => "Hello " + val;
 					//hello = () => "Hello World!";
 					/*
-						() => {
-						  return "Hello World!";
-						}
-					*/
+					//*	() => {
+					//*	  return "Hello World!";
+					//*	}
+					//*/
 					//(a, b) => a * b;
 					//HAVE TO ACCOMMODATE FOR ALL THESE ISSUES
 					
 					
+				}else{
+					return false;
 				}
 			}
 			return false;
