@@ -32,6 +32,7 @@
 			   break;			   
 		   }
 		   $this->variableName = str_replace( ['const' , $declaration . ' '] , '' , $parts[0] );
+		   $this->value = self::parse( $parts[1] );
 	      }else{
 		   $parts = explode ( ' ' , $code);
 		   
@@ -167,7 +168,7 @@
                {
                    case "var":
                    case "let":
-                       return '$' . $this->variableName;
+                       return '$' . $this->variableName . ($this->value ? ' = ' . $this->value->toPHP() : ' = null;';
                    break;
                    case "const":
                        return 'define(\'' . $this->variableName . '\' , ' . ($this->value ? $this->value->toPHP() : 'null') . ')';
