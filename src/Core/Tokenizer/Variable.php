@@ -2,7 +2,7 @@
   
     namespace PHPJS\Core\Tokenizer;
 
-    class Variable extends \PHPJS\Core\Abstraction\Token implements \PHPJS\Core\Interface\TranspilerInterface , \PHPJS\Core\Interface\TokenInterface
+    class Variable extends \PHPJS\Core\Abstraction\Token implements \PHPJS\Core\Interfaces\TranspilerInterface , \PHPJS\Core\Interfaces\TokenInterface
     {
          private $variableName = '';
          private $declareType = null;
