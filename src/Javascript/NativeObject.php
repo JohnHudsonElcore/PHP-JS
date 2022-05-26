@@ -12,7 +12,7 @@
 	class NativeObject
 	{
 		public $constructor;
-		public $__proto__; 
+		public static $__proto__; 
 		public function __construct()
 		{
 				
