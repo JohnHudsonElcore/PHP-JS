@@ -1,6 +1,6 @@
 <?php
     
-    namespace PHPJS\Core\Interface;
+    namespace PHPJS\Core\Interfaces;
 
     interface TokenInterface
     {
