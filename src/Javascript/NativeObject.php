@@ -47,6 +47,13 @@
 		{
 			$this->{'get' . $key} = $callable;
 		}
+		public function propertyIsEnumerable($object)
+		{
+			if( is_array ( $object ) ) return true;
+			if ( $object instanceof \Iterator) return true;
+			if ( $object instanceof \Traversable) return true;
+			return false;
+		}
 		public function __lookupGetter__(string $key)
 		{
 			$getter = $this->{'key' . $key};
